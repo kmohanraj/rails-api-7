@@ -19,3 +19,10 @@ Step-3: Generate Controllers
 ```
 rails g controller api/v1/products index show --no-helper --no-assets --no-template-engine --no-test-framework
 ```
+
+Step-4: Generate Model
+
+```
+rails g model category name:string desc:string
+rails g model product name:string brand:string price:decimal{10.2} desc:string is_active:boolean category:references
+```
