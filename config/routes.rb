@@ -4,7 +4,12 @@ Rails.application.routes.draw do
     namespace :v1 do
       # get 'products/index'
       # get 'products/show'
-      resources :products, only: %i[index show create]
+      # resources :products, only: %i[index show create]
+      resources :products do
+        collection do
+          get :category
+        end
+      end
     end
   end
 end
